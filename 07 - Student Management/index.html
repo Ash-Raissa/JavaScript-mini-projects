@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Student Management System</h1>
+            <p>Manage students and their academic performance</p>
+        </header>
+
+        <!-- Statistics -->
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p id="totalStudents">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Passed</h3>
+                <p id="passedStudents">0</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>Failed</h3>
+                <p id="failedStudents">0</p>
+            </div>
+        </section>
+
+        <!-- Add Student Form -->
+        <section class="form-section">
+            <h2>Add New Student</h2>
+
+            <form id="studentForm">
+
+                <input type="text" id="studentName"
+                    placeholder="Student Name" required>
+
+                <input type="number" id="studentAge"
+                    placeholder="Student Age" min="1" required>
+
+                <input type="number" id="score1"
+                    placeholder="Score 1" min="0" max="100" required>
+
+                <input type="number" id="score2"
+                    placeholder="Score 2" min="0" max="100" required>
+
+                <input type="number" id="score3"
+                    placeholder="Score 3" min="0" max="100" required>
+
+                <button type="submit">Add Student</button>
+
+            </form>
+        </section>
+
+        <!-- Search -->
+        <section class="search-section">
+            <h2>Student Records</h2>
+
+            <input type="text" id="searchInput"
+                placeholder="Search student by name...">
+        </section>
+
+        <!-- Student Table -->
+        <section class="table-section">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Average</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="studentTable">
+                </tbody>
+            </table>
+
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
